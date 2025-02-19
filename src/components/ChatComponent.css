@@ -72,44 +72,51 @@
 /* Chat Input */
 .chat-input {
   display: flex;
+  align-items: center;
+  gap: 10px; /* Adds spacing between input and button */
   padding: 10px;
   background: #fff;
   border: 1px solid #ac0e16;
-  border-radius: 3px;
-  margin-right: 2%;
-
-  margin-left: 2%;
+  border-radius: 5px;
+  width: 96%; /* Adjust width to fit container */
+  margin: 0 auto; /* Centers it */
 }
 
+/* Input Field */
 .chat-input input {
-  flex: 1;
+  flex: 1; /* Ensures input field takes up remaining space */
   padding: 10px;
   font-size: 16px;
   border: 1px solid #059611;
   outline: none;
-  border-radius: 3px;
+  border-radius: 5px;
   box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Send Button */
 .chat-input button {
   background: #007bff;
   color: white;
   border: none;
   padding: 10px 15px;
-  margin-left: 10px;
   font-size: 16px;
   cursor: pointer;
   border-radius: 5px;
-  margin-right: 2%;
+  flex-shrink: 0; /* Prevents button from shrinking */
 }
 
-.chat-input button:hover {
-  background: #0056b3;
+/* Responsive Fix */
+@media (max-width: 768px) {
+  .chat-input {
+    width: 90%; /* Make it fit properly */
+  }
+  
+  .chat-input button {
+    padding: 8px 12px; /* Reduce button size */
+    font-size: 14px;
+  }
 }
-.icon {
-  font-size: 20px;
-  margin-right: 10px;
-}
+
 
 .spinner {
   border: 4px solid rgba(0, 0, 0, 0.1);
